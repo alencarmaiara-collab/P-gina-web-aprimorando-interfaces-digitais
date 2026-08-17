@@ -79,4 +79,23 @@ Isso deixa o conteúdo **centralizado horizontal e verticalmente** na tela.
         <p>✔ Trabalhar em grupo respeitando as ideias de todos.</p>
 
         <p>✔ Participar de campanhas de arrecadação para ajudar quem precisa.</p>
+        Claro! Um botão de curtida simples pode ser feito assim:
+
+```html
+<button onclick="curtir()">👍 Curtir</button>
+
+<p id="contador">0 curtidas</p>
+
+<script>
+let curtidas = 0;
+
+function curtir() {
+  curtidas++;
+  document.getElementById("contador").innerHTML = curtidas + " curtidas";
+}
+</script>
+```
+
+Ao clicar no botão, o número de curtidas aumenta.
+
       
