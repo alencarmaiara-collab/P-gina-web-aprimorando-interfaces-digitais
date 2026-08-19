@@ -82,91 +82,12 @@
         <p>Tipos: Ela se divide em cognitiva (entender a mente), emocional (sentir junto) e compassiva (agir para ajudar)
             .<p>Respeito: Ajuda a valorizar a diversidade sem julgamento<p>
                 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <title>Botão de Curtidas</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background: #f0f2f5;
-            font-family: Arial, sans-serif;
-        }
-
-        .like-btn {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            padding: 6px 12px;
-            background: white;
-            border: 1.5px solid #ddd;
-            border-radius: 20px;
-            cursor: pointer;
-            transition: 0.2s;
-            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
-            user-select: none;
-            font-size: 14px;
-        }
-
-        .like-btn:hover {
-            transform: scale(1.05);
-        }
-
-        .like-btn.liked {
-            border-color: #e74c3c;
-            background: #fff5f5;
-        }
-
-        .heart {
-            font-size: 16px;
-            transition: 0.2s;
-        }
-
-        .like-btn.liked .heart {
-            color: #e74c3c;
-            transform: scale(1.15);
-        }
-
-        .count {
-            font-weight: bold;
-            color: #333;
-        }
-    </style>
-</head>
+<html>
 <body>
 
-    <div class="like-btn" id="likeBtn" onclick="toggleLike()">
-        <span class="heart" id="heart">♡</span>
-        <span class="count" id="count">0</span>
-    </div>
-
-    <script>
-        let likes = 0;
-        let isLiked = false;
-
-        function toggleLike() {
-            const btn = document.getElementById('likeBtn');
-            const heart = document.getElementById('heart');
-            const count = document.getElementById('count');
-
-            if (isLiked) {
-                likes--;
-                isLiked = false;
-                btn.classList.remove('liked');
-                heart.textContent = '♡';
-            } else {
-                likes++;
-                isLiked = true;
-                btn.classList.add('liked');
-                heart.textContent = '♥';
-            }
-            count.textContent = likes;
-        }
-    </script>
+<button onclick="this.innerHTML = this.innerHTML.includes('♥') ? '♡ 0' : '♥ 1'">
+♡ 0
+</button>
 
 </body>
 </html>
