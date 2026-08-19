@@ -85,7 +85,7 @@
 <html>
 <body>
 
-<button onclick="this.innerHTML = this.innerHTML.includes('♥') ? '♡ 0' : '♥ 1'">
+<button onclick="this.dataset.n = (this.dataset.n|0)+1; this.innerHTML='♥ '+this.dataset.n">
 ♡ 0
 </button>
 
