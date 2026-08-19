@@ -81,11 +81,10 @@
         Compreensão: A empatia é a capacidade de entender o ponto de vista e os sentimentos de outra pessoa.
         <p>Tipos: Ela se divide em cognitiva (entender a mente), emocional (sentir junto) e compassiva (agir para ajudar)
             .<p>Respeito: Ajuda a valorizar a diversidade sem julgamento<p>
-<!DOCTYPE html>
+                <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Botão de Curtidas</title>
     <style>
         body {
@@ -94,46 +93,45 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-color: #f0f2f5;
+            background: #f0f2f5;
             font-family: Arial, sans-serif;
         }
 
-        .like-button {
+        .like-btn {
             display: flex;
             align-items: center;
-            gap: 8px;
-            padding: 12px 20px;
-            background-color: white;
-            border: 2px solid #e0e0e0;
-            border-radius: 50px;
+            gap: 6px;
+            padding: 6px 12px;
+            background: white;
+            border: 1.5px solid #ddd;
+            border-radius: 20px;
             cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: 0.2s;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.08);
             user-select: none;
+            font-size: 14px;
         }
 
-        .like-button:hover {
+        .like-btn:hover {
             transform: scale(1.05);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
 
-        .like-button.liked {
+        .like-btn.liked {
             border-color: #e74c3c;
-            background-color: #fff5f5;
+            background: #fff5f5;
         }
 
         .heart {
-            font-size: 24px;
-            transition: all 0.3s ease;
+            font-size: 16px;
+            transition: 0.2s;
         }
 
-        .like-button.liked .heart {
+        .like-btn.liked .heart {
             color: #e74c3c;
-            transform: scale(1.2);
+            transform: scale(1.15);
         }
 
         .count {
-            font-size: 16px;
             font-weight: bold;
             color: #333;
         }
@@ -141,7 +139,7 @@
 </head>
 <body>
 
-    <div class="like-button" id="likeBtn" onclick="toggleLike()">
+    <div class="like-btn" id="likeBtn" onclick="toggleLike()">
         <span class="heart" id="heart">♡</span>
         <span class="count" id="count">0</span>
     </div>
@@ -151,30 +149,24 @@
         let isLiked = false;
 
         function toggleLike() {
-            const button = document.getElementById('likeBtn');
+            const btn = document.getElementById('likeBtn');
             const heart = document.getElementById('heart');
             const count = document.getElementById('count');
 
             if (isLiked) {
-                // Descurtir
                 likes--;
                 isLiked = false;
-                button.classList.remove('liked');
+                btn.classList.remove('liked');
                 heart.textContent = '♡';
             } else {
-                // Curtir
                 likes++;
                 isLiked = true;
-                button.classList.add('liked');
+                btn.classList.add('liked');
                 heart.textContent = '♥';
             }
-
             count.textContent = likes;
         }
     </script>
 
 </body>
 </html>
-
-
-      
