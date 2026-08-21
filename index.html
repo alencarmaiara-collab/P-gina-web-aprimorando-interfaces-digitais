@@ -322,4 +322,37 @@ body {
 
 </body>
 </html>
+```html
+<button onclick="curtir()">
+    ❤️ <span id="likes">0</span>
+</button>
+
+<script>
+    let curtidas = 0;
+
+    function curtir() {
+        curtidas++;
+        document.getElementById("likes").innerText = curtidas;
+    }
+</script>
+
+<style>
+    button {
+        background: none;
+        border: none;
+        font-size: 35px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    button:hover {
+        transform: scale(1.2);
+    }
+
+    #likes {
+        font-size: 20px;
+        color: #e25555;
+    }
+</style>
 ```
+
