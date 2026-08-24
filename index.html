@@ -183,3 +183,218 @@
 </html>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</style>
+</head>
+
+<body>
+
+    <!-- BOTÃO ALTERNAR TEMA -->
+    <button class="theme-toggle" id="btn-theme" onclick="alternarTema()">
+        <span id="theme-icon">🌙</span> <span id="theme-text">Modo Escuro</span>
+    </button>
+
+    <!-- CABEÇALHO -->
+    <header>
+        <h1>❤️ Empatia e Cooperação</h1>
+        <p>Entender, respeitar e ajudar uns aos outros torna o mundo um lugar melhor.</p>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main>
+        <!-- IMAGEM PRINCIPAL -->
+        <section class="imagem-principal">
+            <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1000&q=80" 
+                 alt="Grupo de amigos unidos sorrindo em um momento de cooperação e empatia">
+        </section>
+
+        <!-- EMPATIA -->
+        <section>
+            <h2>🌹 O que é Empatia?</h2>
+            <p class="texto">
+                Empatia é a capacidade de entender os sentimentos, pensamentos e o ponto de vista de outra pessoa.
+                É saber ouvir, respeitar e acolher sem julgar.
+            </p>
+
+            <!-- SEGUNDA IMAGEM (EMPATIA) -->
+            <div class="imagem-secundaria">
+                <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?auto=format&fit=crop&w=1000&q=80" 
+                     alt="Mãos dadas representando apoio, cuidado e empatia">
+            </div>
+
+            <div class="cards">
+                <article class="card">
+                    <h3>🧠 Empatia Cognitiva</h3>
+                    <p>Entender os pensamentos e o ponto de vista de outra pessoa.</p>
+                </article>
+
+                <article class="card">
+                    <h3>❤️ Empatia Emocional</h3>
+                    <p>Perceber e compreender os sentimentos de outras pessoas.</p>
+                </article>
+
+                <article class="card">
+                    <h3>🤝 Empatia Compassiva</h3>
+                    <p>Além de compreender, também agir para ajudar quem precisa.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- COOPERAÇÃO -->
+        <section class="cooperacao">
+            <h2>🤝 Cooperação</h2>
+            <p class="texto">
+                Cooperação é trabalhar em conjunto para alcançar objetivos comuns. Quando cooperamos, ouvimos,
+                compartilhamos ideias e ajudamos uns aos outros.
+            </p>
+
+            <!-- TERCEIRA IMAGEM (COOPERAÇÃO) -->
+            <div class="imagem-secundaria">
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000&q=80" 
+                     alt="Pessoas cooperando e trabalhando juntas em equipe">
+            </div>
+
+            <div class="cards">
+                <article class="card">
+                    <h3>🌎 Respeito</h3>
+                    <p>Valorizar as diferenças e opiniões de cada pessoa.</p>
+                </article>
+
+                <article class="card">
+                    <h3>💬 Diálogo</h3>
+                    <p>Conversar e ouvir com atenção e respeito.</p>
+                </article>
+
+                <article class="card">
+                    <h3>🌟 Trabalho em equipe</h3>
+                    <p>Juntar forças e ideias para alcançar melhores resultados.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- EXEMPLOS -->
+        <section class="exemplos">
+            <h2>💡 Exemplos de Empatia e Cooperação</h2>
+
+            <ul class="lista-exemplos">
+                <li class="exemplo">✔️ Ajudar um colega com dificuldades.</li>
+                <li class="exemplo">✔️ Ouvir alguém antes de dar sua opinião.</li>
+                <li class="exemplo">✔️ Compartilhar materiais quando necessário.</li>
+                <li class="exemplo">✔️ Respeitar as ideias de todos.</li>
+                <li class="exemplo">✔️ Participar de campanhas para ajudar quem precisa.</li>
+            </ul>
+        </section>
+
+        <!-- IMPORTÂNCIA -->
+        <section class="importancia">
+            <h2>💖 Por que isso é importante?</h2>
+            <p class="texto">
+                A empatia e a cooperação ajudam a criar relações mais saudáveis e um ambiente onde todos possam
+                se sentir respeitados, ouvidos e valorizados.
+            </p>
+        </section>
+
+        <!-- CURTIDAS -->
+        <section class="curtida">
+            <h2>Gostou da página?</h2>
+            <p>Deixe seu coração! ❤️</p>
+
+            <button id="btn-coracao" class="coracao" onclick="curtir()" aria-label="Curtir a página">
+                ❤️
+            </button>
+
+            <span id="likes">0 curtidas</span>
+        </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p>🍷 Empatia • Respeito • Cooperação • Solidariedade</p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // GERENCIAMENTO DE TEMAS (DARK / LIGHT)
+        const html = document.documentElement;
+        const themeIcon = document.getElementById('theme-icon');
+        const themeText = document.getElementById('theme-text');
+
+        function aplicarTema(tema) {
+            html.setAttribute('data-theme', tema);
+            localStorage.setItem('temaPreferido', tema);
+
+            if (tema === 'dark') {
+                themeIcon.textContent = '☀️';
+                themeText.textContent = 'Modo Claro';
+            } else {
+                themeIcon.textContent = '🌙';
+                themeText.textContent = 'Modo Escuro';
+            }
+        }
+
+        function alternarTema() {
+            const temaAtual = html.getAttribute('data-theme');
+            const novoTema = temaAtual === 'dark' ? 'light' : 'dark';
+            aplicarTema(novoTema);
+        }
+
+        // Carrega o tema salvo ou usa o padrão do sistema
+        const temaSalvo = localStorage.getItem('temaPreferido');
+        const prefereEscuro = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if (temaSalvo) {
+            aplicarTema(temaSalvo);
+        } else if (prefereEscuro) {
+            aplicarTema('dark');
+        }
+
+        // SISTEMA DE CURTIDAS (LOCALSTORAGE)
+        let curtidas = parseInt(localStorage.getItem('totalCurtidas')) || 0;
+        let jaCurtiu = localStorage.getItem('usuarioCurtiu') === 'true';
+
+        const btnCoracao = document.getElementById('btn-coracao');
+        const contador = document.getElementById('likes');
+
+        function atualizarExibicaoCurtidas() {
+            contador.textContent = curtidas === 1 ? "1 curtida" : `${curtidas} curtidas`;
+            if (jaCurtiu) {
+                btnCoracao.disabled = true;
+                btnCoracao.setAttribute('title', 'Você já curtiu esta página!');
+            }
+        }
+
+        function curtir() {
+            if (!jaCurtiu) {
+                curtidas++;
+                jaCurtiu = true;
+                localStorage.setItem('totalCurtidas', curtidas);
+                localStorage.setItem('usuarioCurtiu', 'true');
+                atualizarExibicaoCurtidas();
+            }
+        }
+
+        atualizarExibicaoCurtidas();
+    </script>
+
+</body>
