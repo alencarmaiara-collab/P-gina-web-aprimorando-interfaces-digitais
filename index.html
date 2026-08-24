@@ -1,11 +1,11 @@
+<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Empatia e  <img Cooperação title>
- src="empatia.jpg" alt="Imagem sobre empatia e cooperação">
+    <title>Empatia e Cooperação</title>
 
     <style>
         * {
@@ -14,40 +14,63 @@
             padding: 0;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
             background: #f5fbf9;
             color: #444;
             text-align: center;
+            line-height: 1.6;
         }
 
+        /* CABEÇALHO */
         header {
             background: linear-gradient(135deg, #72cbb5, #79bce8);
             color: white;
-            padding: 50px 20px;
+            padding: 60px 20px;
         }
 
         header h1 {
             font-size: 42px;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
         header p {
             font-size: 19px;
+            max-width: 700px;
+            margin: auto;
         }
 
+        /* IMAGEM */
+        .imagem-principal {
+            padding: 35px 20px 10px;
+        }
+
+        .imagem-principal img {
+            width: 100%;
+            max-width: 700px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        /* SEÇÕES */
         section {
-            padding: 40px 20px;
+            padding: 50px 20px;
         }
 
         h2 {
             color: #39927e;
             margin-bottom: 20px;
+            font-size: 30px;
         }
 
         p {
             font-size: 18px;
-            line-height: 1.6;
         }
 
         .texto {
@@ -55,58 +78,80 @@
             margin: auto;
         }
 
+        /* CARDS */
         .cards {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 25px;
+            gap: 25px;
+            margin-top: 30px;
         }
 
         .card {
             background: white;
             width: 280px;
-            padding: 25px;
+            padding: 30px 25px;
             border-radius: 18px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
         }
 
         .card h3 {
             color: #e27d60;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            font-size: 21px;
         }
 
-        .beneficios {
-            background: #e8f5f2;
+        .card p {
+            font-size: 16px;
         }
 
-        .beneficios p {
-            max-width: 650px;
-            margin: 10px auto;
-            background: white;
-            padding: 12px;
-            border-radius: 10px;
+        /* COOPERAÇÃO */
+        .cooperacao {
+            background: #eef9f6;
         }
 
+        /* EXEMPLOS */
         .exemplos {
             background: #fff3ed;
         }
 
-        .exemplo {
-            max-width: 650px;
-            margin: 12px auto;
-            background: white;
-            padding: 15px;
-            border-radius: 12px;
+        .lista-exemplos {
+            max-width: 700px;
+            margin: 25px auto 0;
         }
 
+        .exemplo {
+            background: white;
+            margin: 12px 0;
+            padding: 16px 20px;
+            border-radius: 12px;
+            text-align: left;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
+        }
+
+        .exemplo:hover {
+            transform: translateX(5px);
+        }
+
+        /* IMPORTÂNCIA */
+        .importancia {
+            background: white;
+        }
+
+        /* CURTIDAS */
         .curtida {
             background: linear-gradient(135deg, #ffd9d9, #ffecec);
+        }
+
+        .curtida p {
+            margin-bottom: 20px;
         }
 
         .coracao {
@@ -118,11 +163,12 @@
             font-size: 45px;
             cursor: pointer;
             box-shadow: 0 5px 15px #ccc;
-            transition: 0.2s;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         .coracao:hover {
             transform: scale(1.1);
+            box-shadow: 0 8px 20px #bbb;
         }
 
         .coracao:active {
@@ -131,26 +177,49 @@
 
         #likes {
             display: block;
-            margin-top: 12px;
+            margin-top: 15px;
             color: #e25555;
             font-size: 20px;
             font-weight: bold;
         }
 
+        /* RODAPÉ */
         footer {
             background: #3f3d56;
             color: white;
-            padding: 25px;
+            padding: 25px 20px;
         }
 
+        footer p {
+            font-size: 16px;
+        }
+
+        /* RESPONSIVIDADE */
         @media (max-width: 600px) {
+
+            header {
+                padding: 45px 15px;
+            }
+
             header h1 {
                 font-size: 32px;
+            }
+
+            header p {
+                font-size: 17px;
+            }
+
+            h2 {
+                font-size: 26px;
             }
 
             .card {
                 width: 100%;
                 max-width: 330px;
+            }
+
+            .imagem-principal img {
+                height: 220px;
             }
         }
     </style>
@@ -158,6 +227,7 @@
 
 <body>
 
+    <!-- CABEÇALHO -->
     <header>
         <h1>💚 Empatia e Cooperação</h1>
 
@@ -167,7 +237,12 @@
         </p>
     </header>
 
+    <!-- IMAGEM -->
+    <section class="imagem-principal">
+        <img src="empatia.jpg" alt="Pessoas demonstrando empatia e cooperação">
+    </section>
 
+    <!-- EMPATIA -->
     <section>
         <h2>🌱 O que é Empatia?</h2>
 
@@ -180,7 +255,7 @@
         <div class="cards">
 
             <div class="card">
-                <h3>🧠 Cognitiva</h3>
+                <h3>🧠 Empatia Cognitiva</h3>
                 <p>
                     Entender os pensamentos e o ponto de vista
                     de outra pessoa.
@@ -188,7 +263,7 @@
             </div>
 
             <div class="card">
-                <h3>❤️ Emocional</h3>
+                <h3>❤️ Empatia Emocional</h3>
                 <p>
                     Perceber e compreender os sentimentos
                     de outras pessoas.
@@ -196,7 +271,7 @@
             </div>
 
             <div class="card">
-                <h3>🤝 Compassiva</h3>
+                <h3>🤝 Empatia Compassiva</h3>
                 <p>
                     Além de compreender, também agir
                     para ajudar quem precisa.
@@ -206,8 +281,8 @@
         </div>
     </section>
 
-    </section>
-    <section>
+    <!-- COOPERAÇÃO -->
+    <section class="cooperacao">
 
         <h2>🤝 Cooperação</h2>
 
@@ -246,35 +321,39 @@
 
     </section>
 
-
+    <!-- EXEMPLOS -->
     <section class="exemplos">
 
-        <h2>💡 Exemplos</h2>
+        <h2>💡 Exemplos de Empatia e Cooperação</h2>
 
-        <div class="exemplo">
-            ✔ Ajudar um colega com dificuldades.
-        </div>
+        <div class="lista-exemplos">
 
-        <div class="exemplo">
-            ✔ Ouvir alguém antes de dar sua opinião.
-        </div>
+            <div class="exemplo">
+                ✔️ Ajudar um colega com dificuldades.
+            </div>
 
-        <div class="exemplo">
-            ✔ Compartilhar materiais quando necessário.
-        </div>
+            <div class="exemplo">
+                ✔️ Ouvir alguém antes de dar sua opinião.
+            </div>
 
-        <div class="exemplo">
-            ✔ Respeitar as ideias de todos.
-        </div>
+            <div class="exemplo">
+                ✔️ Compartilhar materiais quando necessário.
+            </div>
 
-        <div class="exemplo">
-            ✔ Participar de campanhas para ajudar quem precisa.
+            <div class="exemplo">
+                ✔️ Respeitar as ideias de todos.
+            </div>
+
+            <div class="exemplo">
+                ✔️ Participar de campanhas para ajudar quem precisa.
+            </div>
+
         </div>
 
     </section>
 
-
-    <section>
+    <!-- IMPORTÂNCIA -->
+    <section class="importancia">
 
         <h2>💖 Por que isso é importante?</h2>
 
@@ -286,16 +365,17 @@
 
     </section>
 
-
+    <!-- CURTIDAS -->
     <section class="curtida">
 
         <h2>Gostou da página?</h2>
 
         <p>Deixe seu coração! ❤️</p>
 
-        <br>
-
-        <button class="coracao" onclick="curtir()">
+        <button
+            class="coracao"
+            onclick="curtir()"
+            aria-label="Curtir a página">
             ❤️
         </button>
 
@@ -303,23 +383,29 @@
 
     </section>
 
-
+    <!-- RODAPÉ -->
     <footer>
-        🌿 Empatia • Respeito • Cooperação • Solidariedade
+        <p>
+            🌿 Empatia • Respeito • Cooperação • Solidariedade
+        </p>
     </footer>
 
-
+    <!-- JAVASCRIPT -->
     <script>
         let curtidas = 0;
 
         function curtir() {
             curtidas++;
 
-            document.getElementById("likes").innerText =
-                curtidas +
-                (curtidas === 1 ? " curtida" : " curtidas");
+            const contador = document.getElementById("likes");
+
+            contador.textContent =
+                curtidas === 1
+                    ? "1 curtida"
+                    : `${curtidas} curtidas`;
         }
     </script>
 
+</body>
 
-
+</html>
