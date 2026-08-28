@@ -147,31 +147,4 @@
 </head>
 <body>
 
-  <div class="container">
-    <h1 id="titulo">Modo Claro</h1>
-    <p>Clique no botão abaixo para alternar o tema da página.</p>
-    <button id="theme-toggle">Alternar para Modo Escuro</button>
-  </div>
-
-  <script>
-    const toggleBtn = document.getElementById('theme-toggle');
-    const titulo = document.getElementById('titulo');
-
-    toggleBtn.addEventListener('click', () => {
-      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-
-      if (isDark) {
-        document.documentElement.removeAttribute('data-theme');
-        toggleBtn.textContent = 'Alternar para Modo Escuro';
-        titulo.textContent = 'Modo Claro';
-      } else {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        toggleBtn.textContent = 'Alternar para Modo Claro';
-        titulo.textContent = 'Modo Escuro';
-      }
-    });
-  </script>
-
-</body>
-</html>
-        
+  
