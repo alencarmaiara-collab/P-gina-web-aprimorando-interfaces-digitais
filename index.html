@@ -1,107 +1,237 @@
- </style>
-</head>
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empatia & Cooperação</title>
+    <style>
+        :root {
+            /* Paleta Claro (Harmônica: Roxo, Rosa e Azul) */
+            --bg-primary: #f8f9fa;
+            --bg-card: #ffffff;
+            --text-primary: #2d3142;
+            --text-secondary: #4f5d75;
+            --accent: #6c5ce7;
+            --accent-hover: #5b4bc4;
+            --heart-color: #ff7675;
+            --border-color: #e9ecef;
+            --shadow: 0 10px 20px rgba(108, 92, 231, 0.08);
+        }
 
+        [data-theme="dark"] {
+            /* Paleta Escuro */
+            --bg-primary: #0f111a;
+            --bg-card: #1d1e2c;
+            --text-primary: #f1f2f6;
+            --text-secondary: #a4b0be;
+            --accent: #a29bfe;
+            --accent-hover: #81ecec;
+            --heart-color: #ff7675;
+            --border-color: #2d3436;
+            --shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 10%;
+            background-color: var(--bg-card);
+            box-shadow: var(--shadow);
+        }
+
+        .theme-toggle {
+            background: transparent;
+            border: 2px solid var(--accent);
+            color: var(--accent);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h1, h2, h3 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow);
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .lista-exemplos {
+            list-style: none;
+            background-color: var(--bg-card);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow);
+        }
+
+        .exemplo {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .exemplo:last-child {
+            border-bottom: none;
+        }
+
+        .curtida {
+            text-align: center;
+            background-color: var(--bg-card);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .btn-coracao {
+            background: none;
+            border: none;
+            font-size: 3rem;
+            cursor: pointer;
+            transition: transform 0.2s;
+            margin: 1rem 0;
+            display: inline-block;
+        }
+
+        .btn-coracao:hover:not(:disabled) {
+            transform: scale(1.2);
+        }
+
+        .btn-coracao:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            filter: grayscale(40%);
+        }
+
+        #likes {
+            display: block;
+            font-weight: bold;
+            color: var(--text-secondary);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--bg-card);
+            border-top: 1px solid var(--border-color);
+            margin-top: 3rem;
+        }
+    </style>
+</head>
 <body>
 
-    <!-- BOTÃO ALTERNAR TEMA -->
-    <button class="theme-toggle" id="btn-theme" onclick="alternarTema()">
-        <span id="theme-icon">🌙</span> <span id="theme-text">Modo Escuro</span>
-    </button>
-
-    <!-- CABEÇALHO -->
     <header>
-        <h1>❤️ Empatia e Cooperação</h1>
-        <p>Entender, respeitar e ajudar uns aos outros torna o mundo um lugar melhor.</p>
+        <h1>Juntos Somos Melhores</h1>
+        <button class="theme-toggle" onclick="alternarTema()">
+            <span id="theme-icon">🌙</span>
+            <span id="theme-text">Modo Escuro</span>
+        </button>
     </header>
 
-    <!-- CONTEÚDO PRINCIPAL -->
     <main>
-        <!-- IMAGEM PRINCIPAL -->
-        <section class="imagem-principal">
-            <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1000&q=80" 
-                 alt="Grupo de amigos unidos sorrindo em um momento de cooperação e empatia">
-        </section>
-
-        <!-- EMPATIA -->
-        <section>
-            <h2>🌹 O que é Empatia?</h2>
-            <p class="texto">
-                Empatia é a capacidade de entender os sentimentos, pensamentos e o ponto de vista de outra pessoa.
-                É saber ouvir, respeitar e acolher sem julgar.
-            </p>
-
+        <section class="empatia">
+            <h2>❤️ Tipos de Empatia</h2>
             <div class="cards">
                 <article class="card">
-                    <h3>🧠 Empatia Cognitiva</h3>
-                    <p>Entender os pensamentos e o ponto de vista de outra pessoa.</p>
+                    <h3>Empatia Emocional</h3>
+                    <p>Perceber e compreender genuinamente os sentimentos de outras pessoas.</p>
                 </article>
 
                 <article class="card">
-                    <h3>❤️ Empatia Emocional</h3>
-                    <p>Perceber e compreender os sentimentos de outras pessoas.</p>
-                </article>
-
-                <article class="card">
-                    <h3>🤝 Empatia Compassiva</h3>
-                    <p>Além de compreender, também agir para ajudar quem precisa.</p>
+                    <h3>Empatia Compassiva</h3>
+                    <p>Além de compreender a dor do outro, agir ativamente para ajudar quem precisa.</p>
                 </article>
             </div>
         </section>
 
-        <!-- COOPERAÇÃO -->
         <section class="cooperacao">
             <h2>🤝 Cooperação</h2>
-            <p class="texto">
-                Cooperação é trabalhar em conjunto para alcançar objetivos comuns. Quando cooperamos, ouvimos,
-                compartilhamos ideias e ajudamos uns aos outros.
-            </p>
+            <p>Cooperação é trabalhar em conjunto para alcançar objetivos comuns. Quando cooperamos, ouvimos, compartilhamos ideias e ajudamos uns aos outros.</p>
 
             <div class="cards">
                 <article class="card">
                     <h3>🌎 Respeito</h3>
-                    <p>Valorizar as diferenças e opiniões de cada pessoa.</p>
+                    <p>Valorizar as diferenças e acolher as opiniões de cada pessoa.</p>
                 </article>
 
                 <article class="card">
                     <h3>💬 Diálogo</h3>
-                    <p>Conversar e ouvir com atenção e respeito.</p>
+                    <p>Conversar e ouvir com atenção, abertura e empatia.</p>
                 </article>
 
                 <article class="card">
-                    <h3>🌟 Trabalho em equipe</h3>
-                    <p>Juntar forças e ideias para alcançar melhores resultados.</p>
+                    <h3>🌟 Trabalho em Equipe</h3>
+                    <p>Juntar forças e ideias para alcançar resultados melhores para todos.</p>
                 </article>
             </div>
         </section>
 
-        <!-- EXEMPLOS -->
         <section class="exemplos">
-            <h2>💡 Exemplos de Empatia e Cooperação</h2>
-
+            <h2>💡 Exemplos Práticos</h2>
             <ul class="lista-exemplos">
-                <li class="exemplo">✔️ Ajudar um colega com dificuldades.</li>
-                <li class="exemplo">✔️ Ouvir alguém antes de dar sua opinião.</li>
-                <li class="exemplo">✔️ Compartilhar materiais quando necessário.</li>
-                <li class="exemplo">✔️ Respeitar as ideias de todos.</li>
-                <li class="exemplo">✔️ Participar de campanhas para ajudar quem precisa.</li>
+                <li class="exemplo">✔️ Ajudar um colega com dificuldades em uma tarefa.</li>
+                <li class="exemplo">✔️ Ouvir alguém com atenção antes de emitir um julgamento.</li>
+                <li class="exemplo">✔️ Compartilhar materiais e recursos sempre que necessário.</li>
+                <li class="exemplo">✔️ Respeitar pontos de vista diferentes dos seus.</li>
+                <li class="exemplo">✔️ Participar de ações solidárias para apoiar a comunidade.</li>
             </ul>
         </section>
 
-        <!-- IMPORTÂNCIA -->
         <section class="importancia">
-            <h2>💖 Por que isso é importante?</h2>
-            <p class="texto">
-                A empatia e a cooperação ajudam a criar relações mais saudáveis e um ambiente onde todos possam
-                se sentir respeitados, ouvidos e valorizados.
-            </p>
+            <h2>💖 Por que isso importa?</h2>
+            <p>A empatia e a cooperação criam conexões humanas autênticas e transformam o ambiente ao nosso redor em um lugar mais acolhedor, seguro e produtivo.</p>
         </section>
 
-        <!-- CURTIDAS -->
         <section class="curtida">
-            <h2>Gostou da página?</h2>
-            <p>Deixe seu coração! ❤️</p>
+            <h2>Gostou do conteúdo?</h2>
+            <p>Deixe seu carinho clicando no coração!</p>
 
-            <button id="btn-coracao" class="coracao" onclick="curtir()" aria-label="Curtir a página">
+            <button id="btn-coracao" class="btn-coracao" onclick="curtir()" aria-label="Curtir a página">
                 ❤️
             </button>
 
@@ -109,14 +239,11 @@
         </section>
     </main>
 
-    <!-- RODAPÉ -->
     <footer>
-        <p>🍷 Empatia • Respeito • Cooperação • Solidariedade</p>
+        <p>Empatia • Respeito • Cooperação • Solidariedade</p>
     </footer>
 
-    <!-- JAVASCRIPT -->
     <script>
-        // GERENCIAMENTO DE TEMAS (DARK / LIGHT)
         const html = document.documentElement;
         const themeIcon = document.getElementById('theme-icon');
         const themeText = document.getElementById('theme-text');
@@ -140,7 +267,6 @@
             aplicarTema(novoTema);
         }
 
-        // Carrega o tema salvo ou usa o padrão do sistema
         const temaSalvo = localStorage.getItem('temaPreferido');
         const prefereEscuro = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
@@ -150,7 +276,6 @@
             aplicarTema('dark');
         }
 
-        // SISTEMA DE CURTIDAS (LOCALSTORAGE)
         let curtidas = parseInt(localStorage.getItem('totalCurtidas')) || 0;
         let jaCurtiu = localStorage.getItem('usuarioCurtiu') === 'true';
 
@@ -177,7 +302,5 @@
 
         atualizarExibicaoCurtidas();
     </script>
-
 </body>
-
 </html>
