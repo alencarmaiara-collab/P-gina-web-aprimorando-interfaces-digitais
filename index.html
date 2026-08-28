@@ -86,5 +86,92 @@
         <p>Empatia • Respeito • Cooperação • Solidariedade</p>
     </footer>
 
-    <script>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modo Claro e Escuro</title>
+  <style>
+    /* Variáveis do Modo Claro (padrão) */
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #1a1a1a;
+      --card-bg: #f0f0f0;
+      --btn-bg: #007bff;
+      --btn-text: #ffffff;
+    }
+
+    /* Variáveis do Modo Escuro */
+    [data-theme="dark"] {
+      --bg-color: #121212;
+      --text-color: #f1f1f1;
+      --card-bg: #1e1e1e;
+      --btn-bg: #bb86fc;
+      --btn-text: #000000;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .container {
+      background-color: var(--card-bg);
+      padding: 2rem;
+      border-radius: 12px;
+      text-align: center;
+      max-width: 400px;
+      transition: background-color 0.3s;
+    }
+
+    button {
+      background-color: var(--btn-bg);
+      color: var(--btn-text);
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 1rem;
+      transition: background-color 0.3s, color 0.3s;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1 id="titulo">Modo Claro</h1>
+    <p>Clique no botão abaixo para alternar o tema da página.</p>
+    <button id="theme-toggle">Alternar para Modo Escuro</button>
+  </div>
+
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    const titulo = document.getElementById('titulo');
+
+    toggleBtn.addEventListener('click', () => {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+
+      if (isDark) {
+        document.documentElement.removeAttribute('data-theme');
+        toggleBtn.textContent = 'Alternar para Modo Escuro';
+        titulo.textContent = 'Modo Claro';
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        toggleBtn.textContent = 'Alternar para Modo Claro';
+        titulo.textContent = 'Modo Escuro';
+      }
+    });
+  </script>
+
+</body>
+</html>
         
