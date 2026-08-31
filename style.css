@@ -1,12 +1,12 @@
 :root {
  /* Paleta Claro em Tons de Roxo e Violeta */
 --bg-primary: #271149;
---bg-card: #a22dd8;
+--bg-card: #d498f0;
 --text-primary: #2a1b40;
---text-secondary: #5a4b70;
+--text-secondary: #c5a8f0;
 --accent: #6c5ce7;
 --accent-hover: #5b4bc4;
---accent-light: #9064b7;
+--accent-light: #c692f5;
 --heart-color: #a29bfe;
 --border-color: #9069d8;
 --shadow: 0 10px 25px rgba(108, 92, 231, 0.12);
