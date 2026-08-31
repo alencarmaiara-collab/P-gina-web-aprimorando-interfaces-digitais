@@ -12,56 +12,54 @@
 --shadow: 0 10px 25px p\rgba(140, 129, 218, 0.12);
         }
 
-        [data-theme="dark"] {
-            /* Paleta Escuro em Tons de Roxo Profundo */
-            --bg-primary: #9a82e1;
-            --bg-card: hsl(255, 89%, 82%);
-            --text-primary: #020203;
-            --text-secondary: #0e0b13;
-            --accent: #7a74c4;
-            --accent-hover: #8780c6;
-            --accent-light: #63568e;
-            --heart-color: #d63031;
-            --border-color: #9678f9;
-            --shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+[data-theme="dark"] {
+/* Paleta Escuro em Tons de Roxo Profundo */
+ --bg-primary: #9a82e1;
+--bg-card: hsl(255, 89%, 82%);
+--text-primary: #020203;
+--text-secondary: #0e0b13;
+--accent: #7a74c4;
+--accent-hover: #8780c6;
+--accent-light: #63568e;
+--heart-color: #d63031;
+ --border-color: #9678f9;
+--shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
         }
 
         * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+ box-sizing: border-box;
+margin: 0;
+ padding: 0;
+transition: background-color 0.3s, color 0.3s, border-color 0.3s;
         }
 
         body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            background-color: var(--bg-primary);
-            color: var(--text-primary);
-            line-height: 1.6;
+font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+background-color: var(--bg-primary);
+color: var(--text-primary);
+line-height: 1.6;
         }
 
         header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.5rem 10%;
-            background-color: var(--bg-card);
-            box-shadow: var(--shadow);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .theme-toggle {
-            background: transparent;
-            border: 2px solid var(--accent);
-            color: var(--accent);
-            padding: 0.5rem 1.2rem;
-            border-radius: 25px;
-            cursor: pointer;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
+ display: flex;
+ justify-content: space-between;
+align-items: center;
+padding: 1.5rem 10%;
+ background-color: var(--bg-card);
+ box-shadow: var(--shadow);
+position: sticky;
+top: 0;
+z-index: 100;
+        }     .theme-toggle {
+background: transparent;
+border: 2px solid var(--accent);
+color: var(--accent);
+padding: 0.5rem 1.2rem;
+border-radius: 25px;
+cursor: pointer;
+font-weight: 600;
+display: flex;
+align-items: center;
             gap: 0.5rem;
             transition: all 0.2s;
         }
