@@ -17,9 +17,9 @@
             --bg-primary: #120e1e;
             --bg-card: #1c162e;
             --text-primary: #a67afe;
-            --text-secondary: #b8b0cc;
-            --accent: #a29bfe;
-            --accent-hover: #b8b0ff;
+            --text-secondary: #9c88d0;
+            --accent: #7a74c4;
+            --accent-hover: #8780c6;
             --accent-light: #2a2245;
             --heart-color: #d63031;
             --border-color: #2e2648;
@@ -68,7 +68,7 @@
 
         .theme-toggle:hover {
             background-color: var(--accent);
-            color: #fff;
+            color: #f178ed;
         }
 
         main {
