@@ -1,14 +1,14 @@
 :root {
          /* Paleta Claro em Tons de Roxo e Violeta */
-            --bg-primary: #f4f0fa;
-            --bg-card: #ffffff;
+            --bg-primary: #271149;
+            --bg-card: #a22dd8;
             --text-primary: #2a1b40;
             --text-secondary: #5a4b70;
             --accent: #6c5ce7;
             --accent-hover: #5b4bc4;
-            --accent-light: #ece7fe;
+            --accent-light: #9064b7;
             --heart-color: #a29bfe;
-            --border-color: #e2d9f3;
+            --border-color: #9069d8;
             --shadow: 0 10px 25px rgba(108, 92, 231, 0.12);
         }
 
@@ -16,7 +16,7 @@
             /* Paleta Escuro em Tons de Roxo Profundo */
             --bg-primary: #120e1e;
             --bg-card: #1c162e;
-            --text-primary: #f3f0f9;
+            --text-primary: #a67afe;
             --text-secondary: #b8b0cc;
             --accent: #a29bfe;
             --accent-hover: #b8b0ff;
