@@ -1,8 +1,8 @@
 :root {
  /* Paleta Claro em Tons de Roxo e Violeta */
---bg-primary: #271149;
+--bg-primary: #865ec3;
 --bg-card: #d498f0;
---text-primary: #2a1b40;
+--text-primary: #bba1e3;
 --text-secondary: #c5a8f0;
 --accent: #6c5ce7;
 --accent-hover: #5b4bc4;
@@ -14,8 +14,8 @@
 
         [data-theme="dark"] {
             /* Paleta Escuro em Tons de Roxo Profundo */
-            --bg-primary: #120e1e;
-            --bg-card: #1c162e;
+            --bg-primary: #9a82e1;
+            --bg-card: hsl(255, 89%, 82%);
             --text-primary: #a67afe;
             --text-secondary: #9c88d0;
             --accent: #7a74c4;
