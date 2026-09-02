@@ -1,189 +1,308 @@
+/* ===================================================
+   VARIÁVEIS DE CORES (PALETA EM TONS DE VERMELHO)
+   =================================================== */
+
 :root {
-    /* Paleta Clara em Tons de Violeta e Roxo Soft */
-    --bg-primary: #f3f0f8;
-    --bg-card: #ffffff;
-    --text-primary: #2a1b40;
-    --text-secondary: #5a4b70;
-    --accent: #6c5ce7;
-    --accent-hover: #5b4bc4;
-    --accent-light: #e0dcf8;
-    --heart-color: #a29bfe;
-    --border-color: #dcd6f7;
-    --shadow: 0 10px 25px rgba(108, 92, 231, 0.12);
+    /* Modo Claro */
+    --cor-fundo: #fff0f3;
+    --cor-card: #ffffff;
+    --cor-primaria: #c9184a;
+    --cor-primaria-hover: #a6123a;
+    --cor-destaque: #ff4d6d;
+    --cor-texto: #2b090e;
+    --cor-secundaria: #591a24;
+    --cor-sombra: rgba(201, 24, 74, 0.15);
+    --cor-borda: #ffccd5;
+    
+    --fonte-texto: 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
 
-[data-theme="dark"] {
-    /* Paleta Escura em Tons de Roxo Profundo */
-    --bg-primary: #130f26;
-    --bg-card: #1d1738;
-    --text-primary: #f1edfd;
-    --text-secondary: #b8b0d3;
-    --accent: #9b87f5;
-    --accent-hover: #7e69ab;
-    --accent-light: #2d2254;
-    --heart-color: #ff7675;
-    --border-color: #342a5c;
-    --shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+.tema-escuro {
+    /* Modo Escuro */
+    --cor-fundo: #0f0204;
+    --cor-card: #1c0609;
+    --cor-primaria: #ff4d6d;
+    --cor-primaria-hover: #ff758f;
+    --cor-destaque: #ff8fa3;
+    --cor-texto: #fff0f3;
+    --cor-secundaria: #ffccd5;
+    --cor-sombra: rgba(255, 77, 109, 0.25);
+    --cor-borda: #4a0e17;
 }
+
+/* ===================================================
+   ESTILOS GLOBAIS E RESET
+   =================================================== */
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
 }
 
 body {
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-    background-color: var(--bg-primary);
-    color: var(--text-primary);
-    line-height: 1.6;
+    font-family: var(--fonte-texto);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    line-height: 1.8;
 }
 
+.container {
+    max-width: 900px;
+    width: 100%;
+    background: var(--cor-card);
+    padding: 45px;
+    border-radius: 24px;
+    box-shadow: 0 15px 35px var(--cor-sombra);
+    border: 1px solid var(--cor-borda);
+    margin: 20px 0;
+}
+
+/* ===================================================
+   CABEÇALHO
+   =================================================== */
+
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 10%;
-    background-color: var(--bg-card);
-    box-shadow: var(--shadow);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    text-align: center;
+    border-bottom: 2px solid var(--cor-borda);
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+    position: relative;
 }
 
 .theme-toggle {
-    background: transparent;
-    border: 2px solid var(--accent);
-    color: var(--accent);
-    padding: 0.5rem 1.2rem;
-    border-radius: 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: linear-gradient(135deg, var(--cor-primaria), var(--cor-destaque));
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 20px;
     cursor: pointer;
     font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: all 0.2s;
+    box-shadow: 0 4px 12px var(--cor-sombra);
 }
 
 .theme-toggle:hover {
-    background-color: var(--accent);
-    color: #ffffff;
+    opacity: 0.95;
+    transform: translateY(-2px);
 }
 
-main {
-    max-width: 900px;
-    margin: 3rem auto;
-    padding: 0 1.5rem;
+h1 {
+    font-size: 2.6rem;
+    margin-top: 20px;
+    background: linear-gradient(135deg, var(--cor-primaria), var(--cor-destaque));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.hero-banner {
-    width: 100%;
-    max-height: 400px;
-    object-fit: cover;
-    border-radius: 16px;
-    box-shadow: var(--shadow);
-    margin-bottom: 3rem;
+.subtitle {
+    color: var(--cor-secundaria);
+    font-size: 1.2rem;
+    margin-top: 10px;
+    font-weight: 500;
 }
+
+/* ===================================================
+   SEÇÕES E CONTEÚDO
+   =================================================== */
 
 section {
-    margin-bottom: 3.5rem;
-}
-
-h1, h2, h3 {
-    color: var(--accent);
-    margin-bottom: 1rem;
+    margin-bottom: 50px;
 }
 
 h2 {
     font-size: 1.8rem;
-    border-bottom: 2px solid var(--accent-light);
-    padding-bottom: 0.5rem;
+    margin-bottom: 20px;
+    color: var(--cor-primaria);
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.cards {
+p {
+    color: var(--cor-texto);
+    margin-bottom: 18px;
+    font-size: 1.05rem;
+}
+
+.section-image {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin: 20px 0 30px 0;
+    box-shadow: 0 8px 24px var(--cor-sombra);
+    border: 1px solid var(--cor-borda);
+}
+
+/* ===================================================
+   CARDS E GRIDS
+   =================================================== */
+
+.grid-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.5rem;
-    margin-top: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
 }
 
 .card {
-    background-color: var(--bg-card);
-    padding: 1.8rem;
+    background: var(--cor-fundo);
+    padding: 25px;
     border-radius: 16px;
-    border: 1px solid var(--border-color);
-    box-shadow: var(--shadow);
-    transition: transform 0.2s, box-shadow 0.2s;
+    border-top: 5px solid var(--cor-primaria);
+    border-left: 1px solid var(--cor-borda);
+    border-right: 1px solid var(--cor-borda);
+    border-bottom: 1px solid var(--cor-borda);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+.card h3 {
+    color: var(--cor-primaria);
+    margin-bottom: 12px;
+    font-size: 1.25rem;
 }
 
-.lista-exemplos {
+.card p {
+    font-size: 0.98rem;
+    margin-bottom: 0;
+    color: var(--cor-secundaria);
+}
+
+/* ===================================================
+   CAIXAS DE BENEFÍCIOS E LISTAS
+   =================================================== */
+
+.benefits-box {
+    background: var(--cor-fundo);
+    border-radius: 16px;
+    padding: 25px;
+    margin-top: 20px;
+    border-left: 5px solid var(--cor-destaque);
+    border-top: 1px solid var(--cor-borda);
+    border-right: 1px solid var(--cor-borda);
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.benefits-box h3 {
+    color: var(--cor-primaria);
+    margin-bottom: 15px;
+}
+
+.benefits-box ul {
+    list-style-type: none;
+}
+
+.benefits-box li {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 25px;
+    color: var(--cor-texto);
+}
+
+.benefits-box li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--cor-destaque);
+    font-weight: bold;
+}
+
+.actions-list {
     list-style: none;
-    background-color: var(--bg-card);
-    padding: 1.5rem 2rem;
-    border-radius: 16px;
-    border: 1px solid var(--border-color);
-    box-shadow: var(--shadow);
 }
 
-.exemplo {
-    padding: 0.8rem 0;
-    border-bottom: 1px solid var(--border-color);
-    display: flex;
-    align-items: center;
-    gap: 0.8rem;
+.actions-list li {
+    padding: 18px;
+    background: var(--cor-fundo);
+    border-radius: 14px;
+    margin-bottom: 15px;
+    color: var(--cor-texto);
+    border-left: 5px solid var(--cor-primaria);
+    border-top: 1px solid var(--cor-borda);
+    border-right: 1px solid var(--cor-borda);
+    border-bottom: 1px solid var(--cor-borda);
 }
 
-.exemplo:last-child {
-    border-bottom: none;
+.actions-list strong {
+    color: var(--cor-primaria);
 }
 
-.curtida {
+/* ===================================================
+   SEÇÃO DE CURTIR
+   =================================================== */
+
+.like-section {
     text-align: center;
-    background-color: var(--bg-card);
-    padding: 2.5rem;
-    border-radius: 16px;
-    border: 1px solid var(--border-color);
-    box-shadow: var(--shadow);
+    padding: 35px;
+    background: var(--cor-fundo);
+    border-radius: 20px;
+    margin-top: 40px;
+    border: 2px dashed var(--cor-primaria);
 }
 
-.btn-coracao {
-    background: none;
+.like-btn {
+    background: linear-gradient(135deg, var(--cor-primaria), var(--cor-destaque));
+    color: white;
     border: none;
-    font-size: 3.5rem;
+    padding: 16px 36px;
+    font-size: 1.25rem;
+    border-radius: 30px;
     cursor: pointer;
-    transition: transform 0.2s, filter 0.2s;
-    margin: 1rem 0;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: bold;
+    box-shadow: 0 6px 20px var(--cor-sombra);
 }
 
-.btn-coracao:hover:not(:disabled) {
-    transform: scale(1.25);
+.like-btn:hover {
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 10px 25px var(--cor-sombra);
 }
 
-.btn-coracao:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-    filter: grayscale(60%);
+.like-btn:active {
+    transform: scale(0.97);
 }
 
-#likes {
-    display: block;
-    font-weight: 600;
-    color: var(--text-secondary);
-    font-size: 1.1rem;
+.like-btn.liked {
+    background: linear-gradient(135deg, #10b981, #059669);
 }
+
+/* ===================================================
+   RODAPÉ E RESPONSIVIDADE
+   =================================================== */
 
 footer {
     text-align: center;
-    padding: 2rem;
-    background-color: var(--bg-card);
-    border-top: 1px solid var(--border-color);
-    margin-top: 4rem;
-    color: var(--text-secondary);
-} 
+    margin-top: 50px;
+    color: var(--cor-secundaria);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+@media (max-width: 600px) {
+    .container { 
+        padding: 25px 20px; 
+    }
+    header { 
+        padding-top: 50px; 
+    }
+    .theme-toggle { 
+        top: 0; 
+        right: 50%; 
+        transform: translateX(50%); 
+    }
+    .section-image { 
+        height: 220px; 
+    }
+    h1 { 
+        font-size: 2rem; 
+    }
+}
