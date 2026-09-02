@@ -1,283 +1,98 @@
-:root {
-    /* Modo Claro */
-    --cor-fundo: #fff0f3;
-    --cor-card: #ffffff;
-    --cor-primaria: #c9184a;
-    --cor-primaria-hover: #a6123a;
-    --cor-destaque: #ff4d6d;
-    --cor-texto: #2b090e;
-    --cor-secundaria: #591a24;
-    --cor-sombra: rgba(201, 24, 74, 0.15);
-    --cor-borda: #ffccd5;
-    
-    --fonte-texto: 'Segoe UI', system-ui, -apple-system, sans-serif;
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empatia & Cooperação</title>
+    <link rel="stylesheet" href="style.css">
+</head>     
+<body>
 
-.tema-escuro {
-    /* Modo Escuro */
-    --cor-fundo: #0f0204;
-    --cor-card: #1c0609;
-    --cor-primaria: #ff4d6d;
-    --cor-primaria-hover: #ff758f;
-    --cor-destaque: #ff8fa3;
-    --cor-texto: #fff0f3;
-    --cor-secundaria: #ffccd5;
-    --cor-sombra: rgba(255, 77, 109, 0.25);
-    --cor-borda: #4a0e17;
-}
+    <div class="container">
+        <header>
+            <button class="theme-toggle" onclick="alternarTema()" aria-label="Alternar tema" aria-pressed="false">
+                <span id="theme-icon">🌙</span>
+                <span id="theme-text">Modo Escuro</span>
+            </button>
+            <h1>Juntos Somos Melhores</h1>
+            <p class="subtitle">Empatia • Respeito • Cooperação • Solidariedade</p>
+        </header>
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
-}
+        <main>
+            <img class="section-image" src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1000&q=80" alt="Grupo de pessoas unindo as mãos em sinal de cooperação e trabalho em equipe">
 
-body {
-    font-family: var(--fonte-texto);
-    background-color: var(--cor-fundo);
-    color: var(--cor-texto);
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    line-height: 1.8;
-}
+            <section>
+                <h2>💜 Tipos de Empatia</h2>
+                <div class="grid-cards">
+                    <article class="card">
+                        <h3>Empatia Emocional</h3>
+                        <p>Perceber e compreender genuinamente os sentimentos de outras pessoas.</p>
+                    </article>
 
-.container {
-    max-width: 900px;
-    width: 100%;
-    background: var(--cor-card);
-    padding: 45px;
-    border-radius: 24px;
-    box-shadow: 0 15px 35px var(--cor-sombra);
-    border: 1px solid var(--cor-borda);
-    margin: 20px 0;
-}
+                    <article class="card">
+                        <h3>Empatia Compassiva</h3>
+                        <p>Além de compreender a dor do outro, agir ativamente para ajudar quem precisa.</p>
+                    </article>
+                </div>
+            </section>
 
-header {
-    text-align: center;
-    border-bottom: 2px solid var(--cor-borda);
-    padding-bottom: 30px;
-    margin-bottom: 40px;
-    position: relative;
-}
+            <section>
+                <h2>🤝 Cooperação</h2>
+                <p>Cooperação é trabalhar em conjunto para alcançar objetivos comuns. Quando cooperamos, ouvimos, compartilhamos ideias e ajudamos uns aos outros.</p>
 
-.theme-toggle {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: linear-gradient(135deg, var(--cor-primaria), var(--cor-destaque));
-    color: white;
-    border: none;
-    padding: 10px 22px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: 600;
-    box-shadow: 0 4px 12px var(--cor-sombra);
-}
+                <div class="grid-cards">
+                    <article class="card">
+                        <h3>🌎 Respeito</h3>
+                        <p>Valorizar as diferenças e acolher as opiniões de cada pessoa.</p>
+                    </article>
 
-.theme-toggle:hover {
-    opacity: 0.95;
-    transform: translateY(-2px);
-}
+                    <article class="card">
+                        <h3>💬 Diálogo</h3>
+                        <p>Conversar e ouvir com atenção, abertura e empatia.</p>
+                    </article>
 
-h1 {
-    font-size: 2.6rem;
-    margin-top: 20px;
-    background: linear-gradient(135deg, var(--cor-primaria), var(--cor-destaque));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+                    <article class="card">
+                        <h3>🌟 Trabalho em Equipe</h3>
+                        <p>Juntar forças e ideias para alcançar resultados melhores para todos.</p>
+                    </article>
+                </div>
+            </section>
 
-.subtitle {
-    color: var(--cor-secundaria);
-    font-size: 1.2rem;
-    margin-top: 10px;
-    font-weight: 500;
-}
-section {
-    margin-bottom: 50px;
-}
+            <section>
+                <h2>💡 Exemplos Práticos</h2>
+                <ul class="actions-list">
+                    <li><strong>Ajudar:</strong> Apoiar um colega com dificuldades em uma tarefa.</li>
+                    <li><strong>Ouvir:</strong> Prestar atenção antes de emitir um julgamento.</li>
+                    <li><strong>Compartilhar:</strong> Dividir materiais e recursos sempre que necessário.</li>
+                    <li><strong>Respeitar:</strong> Acolher pontos de vista diferentes dos seus.</li>
+                    <li><strong>Participar:</strong> Engajar-se em ações solidárias para apoiar a comunidade.</li>
+                </ul>
+            </section>
 
-h2 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    color: var(--cor-primaria);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
+            <section class="benefits-box">
+                <h3>🔮 Por que isso importa?</h3>
+                <ul>
+                    <li>Cria conexões humanas autênticas e duradouras.</li>
+                    <li>Transforma o ambiente ao redor em um lugar acolhedor e seguro.</li>
+                    <li>Aumenta a produtividade e reduz conflitos no dia a dia.</li>
+                </ul>
+            </section>
 
-p {
-    color: var(--cor-texto);
-    margin-bottom: 18px;
-    font-size: 1.05rem;
-}
+            <section class="like-section">
+                <h2>Gostou do conteúdo?</h2>
+                <p>Deixe seu apoio clicando no botão abaixo!</p>
+                <button id="btn-coracao" class="like-btn" onclick="curtir()" aria-label="Curtir a página">
+                    <span id="heart-icon">💜</span>
+                    <span id="likes" aria-live="polite">0 curtidas</span>
+                </button>
+            </section>
+        </main>
 
-.section-image {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 16px;
-    margin: 20px 0 30px 0;
-    box-shadow: 0 8px 24px var(--cor-sombra);
-    border: 1px solid var(--cor-borda);
-}
+        <footer>
+            <p>Desenvolvido para promover a cultura da empatia.</p>
+        </footer>
+    </div>
 
-
-.grid-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-    margin-top: 25px;
-}
-
-.card {
-    background: var(--cor-fundo);
-    padding: 25px;
-    border-radius: 16px;
-    border-top: 5px solid var(--cor-primaria);
-    border-left: 1px solid var(--cor-borda);
-    border-right: 1px solid var(--cor-borda);
-    border-bottom: 1px solid var(--cor-borda);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
-}
-
-.card h3 {
-    color: var(--cor-primaria);
-    margin-bottom: 12px;
-    font-size: 1.25rem;
-}
-
-.card p {
-    font-size: 0.98rem;
-    margin-bottom: 0;
-    color: var(--cor-secundaria);
-}
-
-
-
-.benefits-box {
-    background: var(--cor-fundo);
-    border-radius: 16px;
-    padding: 25px;
-    margin-top: 20px;
-    border-left: 5px solid var(--cor-destaque);
-    border-top: 1px solid var(--cor-borda);
-    border-right: 1px solid var(--cor-borda);
-    border-bottom: 1px solid var(--cor-borda);
-}
-
-.benefits-box h3 {
-    color: var(--cor-primaria);
-    margin-bottom: 15px;
-}
-
-.benefits-box ul {
-    list-style-type: none;
-}
-
-.benefits-box li {
-    margin-bottom: 12px;
-    position: relative;
-    padding-left: 25px;
-    color: var(--cor-texto);
-}
-
-.benefits-box li::before {
-    content: "✓";
-    position: absolute;
-    left: 0;
-    color: var(--cor-destaque);
-    font-weight: bold;
-}
-
-.actions-list {
-    list-style: none;
-}
-
-.actions-list li {
-    padding: 18px;
-    background: var(--cor-fundo);
-    border-radius: 14px;
-    margin-bottom: 15px;
-    color: var(--cor-texto);
-    border-left: 5px solid var(--cor-primaria);
-    border-top: 1px solid var(--cor-borda);
-    border-right: 1px solid var(--cor-borda);
-    border-bottom: 1px solid var(--cor-borda);
-}
-
-.actions-list strong {
-    color: var(--cor-primaria);
-}
-
-
-
-.like-section {
-    text-align: center;
-    padding: 35px;
-    background: var(--cor-fundo);
-    border-radius: 20px;
-    margin-top: 40px;
-    border: 2px dashed var(--cor-primaria);
-}
-
-
-
-.like-btn {
-    background: linear-gradient(135deg, var(--cor-primaria), var(--cor-destaque));
-    color: white;
-    border: none;
-    padding: 16px 36px;
-    font-size: 1.25rem;
-    border-radius: 30px;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    font-weight: bold;
-    box-shadow: 0 6px 20px var(--cor-sombra);
-}
-
-.like-btn:hover {
-    transform: translateY(-3px) scale(1.03);
-    box-shadow: 0 10px 25px var(--cor-sombra);
-}
-
-.like-btn:active {
-    transform: scale(0.97);
-}
-
-.like-btn.liked {
-    background: linear-gradient(135deg, #10b981, #059669);
-}
-
-
-footer {
-    text-align: center;
-    margin-top: 50px;
-    color: var(--cor-secundaria);
-    font-size: 1rem;
-    font-weight: 500;
-}
-
-@media (max-width: 600px) {
-    .container { 
-        padding: 25px 20px; 
-    }
-    header { 
-        padding-top: 50px; 
-    }
-    .theme-toggle { 
-        top: 0; 
-        right: 50%; 
-        transform: translateX(50%); 
-    }
-    .section-image { 
-        height: 220px; 
-    }
-    h1 { 
-        font-size: 2rem; 
-    }
-}
+    <script src="script.js"></script>
+</body>
+</html>
