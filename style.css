@@ -10,7 +10,7 @@
 
     <div class="container">
         <header>
-            <button class="theme-toggle" onclick="alternarTema()" aria-label="Alternar tema" aria-pressed="false">
+            <button class="theme-toggle" onclick="alternarTema()" aria-label="Alternar para modo escuro" aria-pressed="false">
                 <span id="theme-icon">🌙</span>
                 <span id="theme-text">Modo Escuro</span>
             </button>
@@ -81,7 +81,7 @@
             <section class="like-section">
                 <h2>Gostou do conteúdo?</h2>
                 <p>Deixe seu apoio clicando no botão abaixo!</p>
-                <button id="btn-coracao" class="like-btn" onclick="curtir()" aria-label="Curtir a página">
+                <button id="btn-coracao" class="like-btn" onclick="curtir()" aria-label="Curtir a página (0 curtidas)">
                     <span id="heart-icon">💜</span>
                     <span id="likes" aria-live="polite">0 curtidas</span>
                 </button>
