@@ -4,128 +4,111 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empatia & Cooperação</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-v2.css">
 </head>     
 <body>
 
     <header class="header">
         <h1>Juntos Somos Melhores</h1>
-        <button class="theme-toggle" onclick="alternarTema()">
+        <p>A força da empatia e o poder da cooperação no nosso dia a dia</p>
+        <button class="theme-toggle-btn" id="btn-tema" onclick="alternarTema()" type="button">
             <span id="theme-icon">🌙</span>
             <span id="theme-text">Modo Escuro</span>
         </button>
     </header>
+
+    <nav>
+        <ul>
+            <li><a href="#empatia">Empatia</a></li>
+            <li><a href="#cooperacao">Cooperação</a></li>
+            <li><a href="#exemplos">Exemplos Práticos</a></li>
+            <li><a href="#importancia">Por que Importa?</a></li>
+        </ul>
+    </nav>
 
     <main class="container">
-        <img class="hero-banner" src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1000&q=80" alt="Grupo de pessoas unindo as mãos em sinal de cooperação e trabalho em equipe">
+        
+        
+        <img class="hero-banner" src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1000&q=80" alt="Grupo de pessoas unindo as mãos em sinal de cooperação e trabalho em equipe" style="width: 100%; border-radius: 12px; margin-bottom: 2rem; max-height: 400px; object-fit: cover;">
 
-        <section class="secao">
-            <h2>💜 Tipos de Empatia</h2>
+        
+        <section id="empatia" class="secao">
+            <h2>💜 Os Três Tipos de Empatia</h2>
+            <p class="descricao">A empatia vai além de apenas "se colocar no lugar do outro". A psicologia moderna a divide em três formas complementares:</p>
+            
+            <div class="grid-cards">
+                <article class="card">
+                    <h3>Empatia Cognitiva</h3>
+                    <p>Trata-se da capacidade de compreender racionalmente a perspectiva ou a perspectiva mental de outra pessoa, ajudando na negociação e na resolução de conflitos.</p>
+                </article>
 
-    <header class="header">
-        <h1>Juntos Somos Melhores</h1>
-        <button class="theme-toggle" onclick="alternarTema()" type="button">
-            <span id="theme-icon">🌙</span>
-            <span id="theme-text">Modo Escuro</span>
-        </button>
-    </header>
-            <div class="cards">
                 <article class="card">
                     <h3>Empatia Emocional</h3>
-                    <p>Perceber e compreender genuinamente os sentimentos de outras pessoas.</p>
+                    <p>É a habilidade de sentir fisicamente e emocionalmente o que o outro está passando, criando uma conexão visceral e profunda de afeto.</p>
                 </article>
 
                 <article class="card">
                     <h3>Empatia Compassiva</h3>
-                    <p>Além de compreender a dor do outro, agir ativamente para ajudar quem precisa.</p>
+                    <p>Indo um passo além, a empatia compassiva nos estimula a agir ativamente para aliviar o sofrimento e apoiar quem precisa de ajuda.</p>
                 </article>
             </div>
         </section>
 
+    
+        <section id="cooperacao" class="secao">
+            <h2>🤝 Os Pilares da Cooperação</h2>
+            <p class="descricao">Cooperação é trabalhar em conjunto para alcançar objetivos comuns. Quando cooperamos, unimos competências individuais em prol de um bem maior.</p>
 
-        <section class="secao">
-            <h2>🤝 Cooperação</h2>
-            <p class="descricao">Cooperação é t<!DOCTYPE html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empatia & Cooperação</title>
-    <link rel="stylesheet" href="style.css">
-</head>     
-<body>
-
-    <header class="header">
-        
-        <button class="theme-toggle" onclick="alternarTema()" type="button">
-            <span id="theme-icon">🌙</span>
-            <span id="theme-text">Modo Escuro</span>
-        </button>
-    </header>
-
- <main class="container">
-        
-        <section class="secao">
-            <h2>💜 Tipos de Empatia</h2>
-            <div class="cards">
+            <div class="grid-cards">
                 <article class="card">
-                    <h3>Empatia Emocional</h3>
-                    <p>Perceber e compreender genuinamente os sentimentos de outras pessoas.</p>
+                    <h3>🌎 Respeito & Acolhimento</h3>
+                    <p>Valorizar a diversidade e acolher as opiniões de cada pessoa como fonte de enriquecimento do grupo.</p>
                 </article>
 
                 <article class="card">
-                    <h3>Empatia Compassiva</h3>
-                    <p>Além de compreender a dor do outro, agir ativamente para ajudar quem precisa.</p>
-                </article>
-            </div>
-        </section>
-
-        <section class="secao">
-            <h2>🤝 Cooperação</h2>
-            <p class="descricao">Cooperação é trabalhar em conjunto para alcançar objetivos comuns. Quando cooperamos, ouvimos, compartilhamos ideias e ajudamos uns aos outros.</p>
-
-            <div class="cards">rabalhar em conjunto para alcançar objetivos comuns. Quando cooperamos, ouvimos, compartilhamos ideias e ajudamos uns aos outros.</p>
-
-            <div class="cards">
-                <article class="card">
-                    <h3>🌎 Respeito</h3>
-                    <p>Valorizar as diferenças e acolher as opiniões de cada pessoa.</p>
-                </article>
-
-                <article class="card">
-                    <h3>💬 Diálogo</h3>
-                    <p>Conversar e ouvir com atenção, abertura e empatia.</p>
+                    <h3>💬 Diálogo Transparente</h3>
+                    <p>Conversar e ouvir com atenção total, promovendo a comunicação não violenta e construtiva.</p>
                 </article>
 
                 <article class="card">
                     <h3>🌟 Trabalho em Equipe</h3>
-                    <p>Juntar forças e ideias para alcançar resultados melhores para todos.</p>
+                    <p>Juntar forças, compartilhar responsabilidades e celebrar as vitórias coletivamente.</p>
+                </article>
+
+                <article class="card">
+                    <h3>🔄 Reciprocidade</h3>
+                    <p>Entender que apoiar o crescimento alheio gera uma rede de sustentação onde todos ganham a longo prazo.</p>
                 </article>
             </div>
         </section>
 
-        <section class="secao">
-            <h2>💡 Exemplos Práticos</h2>
-            <ul class="lista-exemplos">
-                <li class="exemplo"><span>✔️</span> Ajudar um colega com dificuldades em uma tarefa.</li>
-                <li class="exemplo"><span>✔️</span> Ouvir alguém com atenção antes de emitir um julgamento.</li>
-                <li class="exemplo"><span>✔️</span> Compartilhar materiais e recursos sempre que necessário.</li>
-                <li class="exemplo"><span>✔️</span> Respeitar pontos de vista diferentes dos seus.</li>
-                <li class="exemplo"><span>✔️</span> Participar de ações solidárias para apoiar a comunidade.</li>
+        
+        <section id="exemplos" class="secao">
+            <h2>💡 Exemplos Práticos no Cotidiano</h2>
+            <ul class="lista-exemplos" style="list-style: none; padding-left: 0;">
+                <li class="exemplo" style="margin-bottom: 0.8rem;"><span>✔️</span> <strong>Na Escola/Faculdade:</strong> Ajudar um colega com dificuldades em uma matéria antes das avaliações.</li>
+                <li class="exemplo" style="margin-bottom: 0.8rem;"><span>✔️</span> <strong>No Trabalho:</strong> Compartilhar conhecimentos e recursos de maneira generosa para facilitar o projeto do time.</li>
+                <li class="exemplo" style="margin-bottom: 0.8rem;"><span>✔️</span> <strong>Na Comunidade:</strong> Participar ativamente de ações solidárias e voluntariado para apoiar famílias vulneráveis.</li>
+                <li class="exemplo" style="margin-bottom: 0.8rem;"><span>✔️</span> <strong>Nas Relações Pessoais:</strong> Ouvir alguém sem interromper ou emitir julgamentos apressados.</li>
             </ul>
         </section>
 
-        <section class="secao">
-            <h2>🔮 Por que isso importa?</h2>
-            <p class="descricao">A empatia e a cooperação criam conexões humanas autênticas e transformam o ambiente ao nosso redor em um lugar mais acolhedor, seguro e produtivo.</p>
+    
+        <section id="importancia" class="secao">
+            <h2>🔮 Por que a Empatia e a Cooperação Importam?</h2>
+            <div class="callout">
+                <h2>Transformação Individual e Coletiva</h2>
+                <p>Estudos indicam que ambientes altamente cooperativos e empáticos reduzem o estresse, aumentam a inovação e fortalecem a saúde mental dos indivíduos. Quando nos unimos, deixamos de focar em disputas de ego e passamos a construir um ecossistema sustentável para todos.</p>
+            </div>
         </section>
 
-        <section class="secao curtida">
+
+        <section class="secao callout" style="border-left: none; background-color: var(--bg-card); border: 1px solid var(--border-color);">
             <h2>Gostou do conteúdo?</h2>
-            <p>Deixe seu carinho clicando no coração!</p>
-            <button id="btn-coracao" class="btn-coracao" onclick="curtir()" aria-label="Curtir a página">
-                💜
+            <p>Apoie esta iniciativa deixando seu carinho abaixo!</p>
+            <button id="btn-coracao" class="btn" style="font-size: 1.5rem; margin-top: 1rem;" onclick="curtir()" aria-label="Curtir a página">
+                💜 <span id="likes">0</span> curtidas
             </button>
-            <span id="likes">0 curtidas</span>
         </section>
     </main>
 
@@ -136,4 +119,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-   
