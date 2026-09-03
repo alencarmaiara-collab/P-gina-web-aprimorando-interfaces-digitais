@@ -33,3 +33,4 @@ function alternarTema() {
         texto.textContent = 'Modo Escuro';
     }
 }
+
